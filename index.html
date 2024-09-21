@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Figtree">
+  
+  <title>Frontend Mentor | Blog preview card</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    *{
+      margin: 0;
+    }
+
+    :root{
+      --primary-color: #F4D04E;
+      --deep-grey: #111111;
+      --light-grey: #6B6B6B;
+    }
+
+    body{
+      background-color: var(--primary-color);
+    }
+
+    #container{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      
+    }
+
+    .blog-card{
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    #container #author-info{
+      display: flex;
+      justify-content: flex-start;
+      width: 300px;
+      place-items: center;
+      height: 50px;
+      line-height: 50px;
+    }
+
+    #container .blog-card img{
+      width: 100%;
+      border-radius: 15px;
+      margin: 10px 0;
+    }
+
+    #container .blog-card .sub-title{
+      font-family: "Figtree", sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      background: var(--primary-color);
+      padding: 5px 10px;
+      display: inline-block;
+      border-radius: 5px;
+      margin: 10px 0;
+      color: var(--deep-grey);
+    }
+
+    #container .blog-card .date{
+      font-family: "Figtree", sans-serif;
+      font-size: 14px;
+      margin: 10px 0;
+      font-weight: bold;
+      color: var(--deep-grey);
+    }
+
+    #container .blog-card .title{
+      font-family: "Figtree", sans-serif;
+      font-size: 18px;
+      font-weight: 800;
+      margin: 10px 0;
+      color: var(--deep-grey);
+    }
+
+    #container .blog-card .title:hover{
+      color: var(--primary-color);
+      cursor: pointer;
+    }
+
+    #container .blog-card .blog-des{
+      font-family: "Figtree", sans-serif;
+      font-size: 14px;
+      color: var(--light-grey);
+      line-height: 20px;
+    }
+
+    #container #author-info img{
+      height: 30px;
+    }
+
+    #container #author-info .author-name{
+      font-family: "Figtree", sans-serif;
+      font-weight: 800;
+      font-size: 11px;
+      padding-left: 10px;
+      color: var(--deep-grey);
+    }
+
+    article{
+      width: 300px;
+      border: 1px solid var(--deep-grey);
+      padding: 20px;
+      border-radius: 15px;
+      background-color: white;
+      box-shadow: 10px 10px  var(--deep-grey); /* Right shadow */
+    }
+
+    @media (max-width: 375px){
+        article{
+          flex-wrap: wrap;
+          width: 90%;
+          height: auto;
+        }
+
+        #container #author-info .author-name , #container .blog-card .blog-des, 
+        #container .blog-card .title, #container .blog-card .date, #container .blog-card .sub-title{
+          word-wrap: break-word;
+        }
+
+    }
+
+  </style>
+</head>
+<body>
+  <div id="container">
+    <article id="sub-container">
+    <div class="blog-card">
+      <img src="./assets/images/illustration-article.svg" alt="This is an illustrative featured image"/>
+      <p class="sub-title">Learning</p>
+      <p class="date"> Published 19 Sep 2024</p>
+      <h1 class="title">HTML & CSS foundations</h1>
+      <p class="blog-des">These languages are the backbone of every website, defining structure, content
+        and presentation.
+      </p>
+    </div>
+    <div id="author-info">
+      <img src="./assets/images/image-avatar.webp" alt="Authors image"/>
+      <p class="author-name">Greg Hooper</p>
+    </div>
+  </article>
+  </div>
+
+</body>
+</html>
